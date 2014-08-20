@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+	<!-- Twitter Cards and Open Graph
+	================================================== -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:creator" content="{{ TWITTER_USERNAME }}">
+	<meta name="twitter:domain" content="{{ DOMAIN }}">
+	<meta name="twitter:site" content="{{ TWITTER_USERNAME }}">
+	<meta property="og:title" content="{{ article.title|striptags }}">
+	<meta property="og:description" content="{{ article.summary|striptags }}">
+	<meta property="og:image" content="{{ SITEURL }}/theme/images/avatar512.png">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
+{% endblock %}
+
+{% block title %}{{ article.title|striptags }} | {{ SITENAME }}{% endblock %}
+{% block description %}{{ article.summary|striptags }}{% endblock %}
+
+{% block content %}
+	<h1 class="title"><a href="/{{ article.url }}" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
+	<time class="date" datetime="{{ article.date }}">{{ article.locale_date }}</time>
+	<div class="content">
+		{{ article.content }}
+	</div>
+	{% if article.next_article or article.prev_article %}
+		<div id="related-articles">
+			{% if article.next_article %}
+				<a href="/{{ article.next_article.url}}" id="next-neighbour">&laquo; {{ article.next_article.title|striptags }}</a>
+			{% endif %}
+			{% if article.prev_article %}
+				<a href="/{{ article.prev_article.url}}" id="prev-neighbour">{{ article.prev_article.title|striptags }} &raquo;</a>
+			{% endif %}
+		</div>
+	{% endif %}
+
+	{% if DISQUS_SITENAME and article.status != "draft" %}
+		<hr class="large">
+
+		<!-- Disqus -->
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_shortname = '{{ DISQUS_SITENAME }}';
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+	{% endif %}
+{% endblock %}

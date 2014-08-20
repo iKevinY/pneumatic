@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+	<!-- Twitter Cards and Open Graph
+	================================================== -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:creator" content="{{ TWITTER_USERNAME }}">
+	<meta name="twitter:domain" content="{{ DOMAIN }}">
+	<meta name="twitter:site" content="{{ TWITTER_USERNAME }}">
+	<meta property="og:title" content="{{ page.title|striptags }}">
+	<meta property="og:description" content="{{ page.summary|striptags }}">
+	<meta property="og:image" content="{{ SITEURL }}/theme/images/avatar512.png">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="{{ SITEURL }}/{{ page.url }}">
+{% endblock %}
+
+{% block title %}{{ page.title }} | {{ SITENAME }}{% endblock %}
+{% block description %}{{ page.summary|striptags }}{% endblock %}
+
+{% block content %}
+	<h1 class="title"><a href="/{{ page.url }}" title="{{ page.title|striptags }}">{{ page.title }}</a></h1>
+	<div class="content">
+		{{ page.content }}
+	</div>
+	<div id="back-to-home"><a href="/">&laquo; Back to Home</a></div>
+{% endblock %}

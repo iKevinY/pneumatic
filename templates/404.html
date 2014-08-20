@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block meta %}<meta name="robots" content="noindex">{% endblock %}
+{% block title %}Page Not Found | {{ SITENAME }}{% endblock %}
+{% block content %}
+	<h1 class="title">Page Not Found</h1>
+	<div class="content">
+		<p>The requested page could not be found. Perhaps try looking through the <a href="/archive/">post archive</a>?</p>
+	</div>
+	<div id="back-to-home"><a href="/">&laquo; Back to Home</a></div>
+{% endblock %}

@@ -6,11 +6,13 @@ Pneumatic is a single-author [Pelican](http://getpelican.com) theme derived from
 
 - [Assets](https://github.com/getpelican/pelican-plugins/tree/master/assets) plugin
 - [Neighbors](https://github.com/getpelican/pelican-plugins/tree/master/neighbors) plugin
-- Sass (install via `gem install sass`)
+- [Sass](http://sass-lang.com) (install via `gem install sass`)
 
 ## Configuration
 
-There are no templates for author, category, and tag pages, so `AUTHORS_SAVE_AS`, `CATEGORY_SAVE_AS`, `CATEGORIES_SAVE_AS`, and `TAGS_SAVE_AS` should all be set to `''`. Here are theme-specific settings that should be present in the Pelican configuration file:
+There are no templates for author, category, and tag pages, so `AUTHORS_SAVE_AS`, `CATEGORY_SAVE_AS`, `CATEGORIES_SAVE_AS`, and `TAGS_SAVE_AS` should all be set to `''`. Additionally, the images in [static/images](static/images) should be replaced appropriately.
+
+Here are theme-specific settings that should be present in the Pelican configuration file:
 
 |  Setting            | Description                                            |
 |:-------------------:|--------------------------------------------------------|

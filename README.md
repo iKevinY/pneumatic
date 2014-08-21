@@ -5,6 +5,7 @@ Pneumatic is a single-author [Pelican](http://getpelican.com) theme derived from
 ## Requirements
 
 - [Assets](https://github.com/getpelican/pelican-plugins/tree/master/assets) plugin
+- [Neighbors](https://github.com/getpelican/pelican-plugins/tree/master/neighbors) plugin
 - Sass (install via `gem install sass`)
 
 ## Configuration

@@ -27,4 +27,4 @@ There are no templates for author, category, and tag pages, so `AUTHORS_SAVE_AS`
 
 ![Archive](screenshots/archive.png?raw=true)
 
-![Mobile](screenshots/mobile.png?raw=true)
+<img src="screenshots/mobile.png?raw=true" alt="Mobile" width=420>

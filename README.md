@@ -1,6 +1,6 @@
 # Pneumatic
 
-Pneumatic is a single-author [Pelican](http://getpelican.com) theme derived from a [theme](https://github.com/gjreda/gregreda.com/tree/master/theme/simply) developed by [Greg Reda](http://www.gregreda.com). It was named due to the fact that it is based on the [Skeleton](http://www.getskeleton.com) framework, and pelicans (like most birds) possess [skeletal pneumaticity](http://en.wikipedia.org/wiki/Skeletal_pneumaticity).
+Pneumatic is a minimalist, single-author [Pelican](http://getpelican.com) theme derived from a [theme](https://github.com/gjreda/gregreda.com/tree/master/theme/simply) developed by [Greg Reda](http://www.gregreda.com). It was named due to the fact that it is based on the [Skeleton](http://www.getskeleton.com) framework, and pelicans (like most birds) possess [skeletal pneumaticity](http://en.wikipedia.org/wiki/Skeletal_pneumaticity).
 
 ## Requirements
 
@@ -10,7 +10,10 @@ Pneumatic is a single-author [Pelican](http://getpelican.com) theme derived from
 
 ## Configuration
 
-There are no templates for author, category, and tag pages, so `AUTHORS_SAVE_AS`, `CATEGORY_SAVE_AS`, `CATEGORIES_SAVE_AS`, and `TAGS_SAVE_AS` should all be set to `''`. Additionally, the images in [static/images](static/images) should be replaced appropriately.
+- There are intentionally no author, category, and tag page templates, so `AUTHORS_SAVE_AS`, `CATEGORY_SAVE_AS`, `CATEGORIES_SAVE_AS`, and `TAGS_SAVE_AS` should all be set to `''`.
+- The files in [static/images](static/images) should be replaced appropriately.
+- [`pygments.css`](static/pygments.css) can be modified to change the syntax highlighting colour scheme.
+- CodeHilite line numbers should be enabled (ie. `MD_EXTENSIONS = [codehilite(linenums=True)]`).
 
 Here are theme-specific settings that should be present in the Pelican configuration file:
 
@@ -25,8 +28,8 @@ Here are theme-specific settings that should be present in the Pelican configura
 | `INDEX_DESCRIPTION` | Used for description `<meta>` on index page            |
 | `SIDEBAR_LINKS`     | List of links displayed under bio text                 |
 | `SOCIAL_ICONS`      | List of tuples in the form `(link, title, icon-class)` |
-| `DISQUS_SITENAME`   | Disqus shortname                                       |
-| `GOOGLE_ANALYTICS`  | Google Analytics tracking code                         |
+| `DISQUS_SITENAME`   | Disqus shortname (optional)                            |
+| `GOOGLE_ANALYTICS`  | Google Analytics tracking code (optional)              |
 
 
 ## Screenshots

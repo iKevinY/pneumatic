@@ -4,9 +4,9 @@ Pneumatic is a minimalist, single-author [Pelican](http://getpelican.com) theme 
 
 ## Requirements
 
-- [Assets](https://github.com/getpelican/pelican-plugins/tree/master/assets) plugin
+- [Assets](https://github.com/getpelican/pelican-plugins/tree/master/assets) plugin (and [webassets](https://github.com/miracle2k/webassets))
 - [Neighbors](https://github.com/getpelican/pelican-plugins/tree/master/neighbors) plugin
-- [Sass](http://sass-lang.com) (install via `gem install sass`)
+- [Sass](http://sass-lang.com)
 
 ## Configuration
 

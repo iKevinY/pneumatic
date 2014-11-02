@@ -168,6 +168,8 @@ code {
 	overflow-x: auto;
 	display: block;
 	border-left: 2px solid #FF8000;
+
+	tbody tr { display: block; }
 }
 
 .linenos {

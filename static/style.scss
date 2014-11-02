@@ -33,6 +33,9 @@ $header-font: "Georgia", "Times New Roman", serif;
 $code-font: "Source Code Pro", monospace;
 $typogrify-font: Baskerville, Palatino, "Book Antiqua", serif;
 
+$accent-colour: #FF8000;
+$icon-colours: #613967, #55acee, #dd4b39, #000, #f76700;
+
 body {
 	background: #fff;
 	font: 14px/22px $body-font;
@@ -120,14 +123,16 @@ a {
 
 		&:hover {
 			text-decoration: none;
-			&.fa-envelope { color: #613967; }
-			&.fa-twitter { color: #55acee; }
-			&.fa-google-plus-square { color: #dd4b39; }
-			&.fa-github { color: #000; }
-			&.fa-soundcloud { color: #f76700; }
+
+			@for $i from 1 through length($icon-colours) {
+				&:nth-of-type(#{$i}) {
+					color: nth($icon-colours, $i)
+				}
+			}
 		}
 	}
 }
+
 
 ul, ol {
 	margin: 12px 0 12px 30px;
@@ -167,22 +172,21 @@ code {
 	font: 12px/20px $code-font;
 	overflow-x: auto;
 	display: block;
-	border-left: 2px solid #FF8000;
+	border-left: 2px solid $accent-colour;
 
-	tbody tr { display: block; }
+	tbody tr { display: block; } // fixes line numbers on Firefox
 }
 
 .linenos {
 	border-right: 1px solid #3d3d3d;
 	background: #eee;
 	padding: 0.5em 0.8em;
+	position: absolute;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-
-	position: absolute;
 }
 
 .codehilite {
@@ -226,9 +230,7 @@ html, body {
 	@media only print { width: 80%; margin-top: -20px; }
 	@media #{$handheld} { width: 90%; }
 	@media #{$desktop} {
-		@mixin column {
-			margin: 0 10px;
-		}
+		@mixin column { margin: 0 10px; }
 
 		.side-column {
 			@include column;

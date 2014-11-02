@@ -165,9 +165,9 @@ code {
 
 .codehilitetable {
 	font: 12px/20px $code-font;
-	overflow: auto;
+	overflow-x: auto;
 	display: block;
-	border-radius: 3px;
+	border-left: 2px solid #FF8000;
 }
 
 .linenos {
@@ -179,11 +179,15 @@ code {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+
+	position: absolute;
 }
 
 .codehilite {
-	margin: 0 1em;
+	margin: 0 3em;
 	> pre { padding-right: 1em; } // adds padding on horizontal scroll
+
+	padding: 0.5em 0;
 }
 
 .admonition {
@@ -351,4 +355,6 @@ footer p {
 	}
 
 	p a:after { content:" ["attr(href)"]"; }
+
+	.linenos { border-right: none }
 }

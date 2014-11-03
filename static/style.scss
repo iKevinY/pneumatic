@@ -34,7 +34,15 @@ $code-font: "Source Code Pro", monospace;
 $typogrify-font: Baskerville, Palatino, "Book Antiqua", serif;
 
 $accent-colour: #FF8000;
-$icon-colours: #613967, #55acee, #dd4b39, #000, #f76700;
+
+$social-icons: (
+	"envelope" #613967,
+	"twitter" #55acee,
+	"google-plus-square" #dd4b39,
+	"github" #000,
+	"soundcloud" #f76700,
+);
+
 
 body {
 	background: #fff;
@@ -123,11 +131,8 @@ a {
 
 		&:hover {
 			text-decoration: none;
-
-			@for $i from 1 through length($icon-colours) {
-				&:nth-of-type(#{$i}) {
-					color: nth($icon-colours, $i)
-				}
+			@each $icon, $colour in $social-icons {
+				&.fa-#{$icon} { color: $colour; }
 			}
 		}
 	}

@@ -177,7 +177,9 @@ code {
 	font: 12px/20px $code-font;
 	overflow-x: auto;
 	display: block;
-	border-left: 2px solid $accent-colour;
+	border-left: 3px solid $accent-colour;
+	border-radius: 2px;
+	padding: 0.8em 0;
 
 	tbody tr { display: block; } // fixes line numbers on Firefox
 }
@@ -185,7 +187,9 @@ code {
 .linenos {
 	border-right: 1px solid #3d3d3d;
 	background: #eee;
-	padding: 0.5em 0.8em;
+	padding: 0 0.7em;
+	width: 1.2em;
+	text-align: right;
 	position: absolute;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -195,8 +199,7 @@ code {
 }
 
 .codehilite {
-	margin: 0 1em 0 3em;
-	padding: 0.5em 0;
+	margin: 0 1em 0 3.5em;
 }
 
 .admonition {

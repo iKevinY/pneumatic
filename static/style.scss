@@ -9,8 +9,8 @@
 
 // Theme Variables
 
-$body-font: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$header-font: "Georgia", "Times New Roman", serif;
+$body-font: "Open Sans", sans-serif;
+$header-font: "Merriweather", serif;
 $code-font: "Source Code Pro", monospace;
 $typogrify-font: Baskerville, Palatino, "Book Antiqua", serif;
 
@@ -47,7 +47,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 body {
 	background: #fff;
-	font: 14px/22px $body-font;
+	font: 14px/23px $body-font;
 	color: #444;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-h1 { font-size: 28px; line-height: 34px; margin-bottom: 8px; }
+h1 { font-size: 24px; line-height: 34px; margin-bottom: 8px; }
 h2 { font-size: 21px; line-height: 30px; margin-top: 24px; }
 h3 { font-size: 17px; line-height: 24px; margin-top: 24px; }
 
@@ -138,7 +138,6 @@ a {
 		}
 	}
 }
-
 
 ul, ol {
 	margin: 12px 0 12px 30px;
@@ -279,23 +278,24 @@ footer p {
 }
 
 #logo {
-	font-size: 26px;
+	font-size: 25px;
 	line-height: 34px;
 	letter-spacing: -0.5px;
 }
 
 #bio {
-	font-size: 90%;
+	font-size: 85%;
 	line-height: 18px;
 	color: #666;
 }
 
-#sidebar-links {
-	@extend h3;
+#sidebar-links a {
+	line-height: 18px;
+	font-weight: normal;
 }
 
 #sidebar-divider {
-	display: none;
+	display: none;  // only appears on mobile
 }
 
 .title {
@@ -355,7 +355,7 @@ footer p {
 		float: none;
 	}
 
-	h1 { font-size: 26px; }
+	h1 { font-size: 24px; }
 
 	#sidebar-divider { display: block; }
 }

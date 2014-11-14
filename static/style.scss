@@ -7,6 +7,23 @@
 * 6/20/2012
 */
 
+// Theme Variables
+
+$body-font: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$header-font: "Georgia", "Times New Roman", serif;
+$code-font: "Source Code Pro", monospace;
+$typogrify-font: Baskerville, Palatino, "Book Antiqua", serif;
+
+$accent-colour: #FF8000;
+
+$social-icons: (
+	"envelope" #613967,
+	"twitter" #55acee,
+	"google-plus-square" #dd4b39,
+	"github" #000,
+	"soundcloud" #f76700,
+);
+
 
 // Reset & Basics (Inspired by Eric Meyer)
 
@@ -27,22 +44,6 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 
 // Typography
-
-$body-font: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$header-font: "Georgia", "Times New Roman", serif;
-$code-font: "Source Code Pro", monospace;
-$typogrify-font: Baskerville, Palatino, "Book Antiqua", serif;
-
-$accent-colour: #FF8000;
-
-$social-icons: (
-	"envelope" #613967,
-	"twitter" #55acee,
-	"google-plus-square" #dd4b39,
-	"github" #000,
-	"soundcloud" #f76700,
-);
-
 
 body {
 	background: #fff;

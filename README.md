@@ -31,6 +31,7 @@ Here are theme-specific settings that should be present in the Pelican configura
 | `SOCIAL_ICONS`      | List of tuples in the form `(link, title, icon-class)` |
 | `DISQUS_SITENAME`   | Disqus shortname (optional)                            |
 | `GOOGLE_ANALYTICS`  | Google Analytics tracking code (optional)              |
+| `DOMAIN`            | Used for Google Analytics and Twitter Cards `<meta>`   |
 
 
 ## Screenshots

@@ -14,7 +14,7 @@ Pneumatic is a minimalist, single-author [Pelican](http://getpelican.com) theme 
 - The files in [static/images](static/images) should be replaced appropriately.
 - [`pygments.css`](static/pygments.css) can be modified to change the syntax highlighting colour scheme.
 - CodeHilite line numbers should be enabled (ie. `MD_EXTENSIONS = [codehilite(linenums=True)]`).
-- Some font and colour choices can be customized in [`style.scss`](static/style.scss#L10). Remember to update [`base.html`](templates/base.html) if adding or removing any web fonts.
+- Some font and colour choices can be customized in [`style.scss`](static/style.scss#L10).
 
 Here are theme-specific settings that should be present in the Pelican configuration file:
 
@@ -28,6 +28,7 @@ Here are theme-specific settings that should be present in the Pelican configura
 | `GOOGLE_PLUS_URL`   | Used for Google+ `<meta>`                              |
 | `INDEX_DESCRIPTION` | Used for description `<meta>` on index page            |
 | `SIDEBAR_LINKS`     | List of links displayed under bio text                 |
+| `GOOGLE_FONTS`      | List of fonts to import from Google Fonts              |
 | `SOCIAL_ICONS`      | List of tuples in the form `(link, title, icon-class)` |
 | `DISQUS_SITENAME`   | Disqus shortname (optional)                            |
 | `GOOGLE_ANALYTICS`  | Google Analytics tracking code (optional)              |

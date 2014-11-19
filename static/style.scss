@@ -186,7 +186,6 @@ code {
 
 .linenos {
 	border-right: 1px solid #3d3d3d;
-	background: #eee;
 	padding: 0 0.7em;
 	width: 1.2em;
 	text-align: right;
@@ -332,6 +331,8 @@ footer p {
 // Media Queries
 
 @media #{$handheld} {
+	// On mobile, sidebar has a fixed width (approximately the width
+	// of a typical phone in portrait) and is centred at top of page
 	#sidebar {
 		position: absolute;
 		width: 280px;

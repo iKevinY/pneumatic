@@ -47,11 +47,13 @@
 			<a href="/"><img id="avatar" alt="Site Avatar" src="/theme/images/avatar.png"></a>
 			<div id="logo" class="text-center"><a href="/">{{ SITENAME }}</a></div>
 			<div id="bio" class="text-center">{{ BIO_TEXT }}</div>
+
 			{% if SIDEBAR_LINKS %}
 			<div id="sidebar-links" class="text-center">
 				{{ SIDEBAR_LINKS | join("&ensp;&bull;&ensp;") }}
 			</div>
 			{% endif %}
+
 			{% if SOCIAL_ICONS %}
 			<div id="social" class="text-center">
 				{% for link, title, icon in SOCIAL_ICONS %}
@@ -59,6 +61,7 @@
 				{% endfor %}
 			</div>
 			{% endif %}
+
 			<hr id="sidebar-divider" class="large">
 		</aside>
 

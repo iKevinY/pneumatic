@@ -54,8 +54,8 @@
 			{% endif %}
 			{% if SOCIAL_ICONS %}
 			<div id="social" class="text-center">
-				{% for icon in SOCIAL_ICONS %}
-					<a href="{{ icon[0] }}" title="{{ icon[1] }}" class="icon fa {{ icon[2] }}"></a>
+				{% for link, title, icon in SOCIAL_ICONS %}
+				<a href="{{ link }}" title="{{ title }}" class="icon fa {{ icon }}"></a>
 				{% endfor %}
 			</div>
 			{% endif %}
@@ -67,15 +67,10 @@
 			<hr class="large">
 		</article>
 
-		<footer class="column main-column">
+		<footer class="main-column">
 			<p>{{ FOOTER_TEXT }}</p>
 		</footer>
-	</div> <!-- container -->
-
-	{% if page and page.mathjax or article and article.mathjax %}
-	<!-- MathJax -->
-	{{ MATHJAXSCRIPT }}
-	{% endif %}
+	</div>
 
 	{% if GOOGLE_ANALYTICS %}
 	<!-- Google Analytics -->

@@ -12,7 +12,7 @@
 	{% block meta %}{% endblock %}
 
 	<!-- Stylesheets and Web Fonts -->
-	{% assets filters="scss, cssmin", output="style.min.css", "style.scss", "pygments.css" %}
+	{% assets filters="scss, cssmin", output="style.min.css", "pneumatic.scss", "pygments.css" %}
 	<link href="/{{ ASSET_URL }}" rel="stylesheet">
 	{% endassets %}
 	{% if GOOGLE_FONTS %}

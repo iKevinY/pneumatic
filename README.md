@@ -14,7 +14,7 @@ Pneumatic is a minimalist, single-author [Pelican](http://getpelican.com) theme 
 - The files in [static/images](static/images) should be replaced appropriately.
 - [`pygments.css`](static/pygments.css) can be modified to change the syntax highlighting colour scheme.
 - CodeHilite line numbers should be enabled (ie. `MD_EXTENSIONS = [codehilite(linenums=True)]`).
-- Some font and colour choices can be customized in [`style.scss`](static/style.scss#L10).
+- Some font and colour choices can be customized in [`pneumatic.scss`](static/pneumatic.scss).
 
 Here are theme-specific settings that should be present in the Pelican configuration file:
 

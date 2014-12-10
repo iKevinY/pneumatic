@@ -27,7 +27,7 @@ Here are theme-specific settings that should be present in the Pelican configura
 | `TWITTER_USERNAME`  | Used for Twitter Cards `<meta>`                        |
 | `GOOGLE_PLUS_URL`   | Used for Google+ `<meta>`                              |
 | `INDEX_DESCRIPTION` | Used for description `<meta>` on index page            |
-| `SIDEBAR_LINKS`     | List of links displayed under bio text                 |
+| `SIDEBAR_LINKS`     | List of links displayed under bio text (max 5 icons)   |
 | `GOOGLE_FONTS`      | List of fonts to import from Google Fonts              |
 | `SOCIAL_ICONS`      | List of tuples in the form `(link, title, icon-class)` |
 | `DISQUS_SITENAME`   | Disqus shortname (optional)                            |

@@ -9,10 +9,8 @@
 
 // Theme Variables
 
-$body-font: "Open Sans", sans-serif;
-$header-font: "Merriweather", serif;
+$main-font: "Raleway", sans-serif;
 $code-font: "Source Code Pro", monospace;
-$typogrify-font: Baskerville, Palatino, "Book Antiqua", serif;
 
 $accent-colour: #FF8000;
 
@@ -47,39 +45,21 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 body {
 	background: #fff;
-	font: 14px/23px $body-font;
-	color: #444;
-	-webkit-font-smoothing: antialiased;
+	font: 14px/23px $main-font;
+	color: #222;
 	-webkit-text-size-adjust: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	color: #181818;
-	font-family: $header-font;
-	font-weight: normal;
-
-	a { font-weight: inherit; }
-
-	.amp {
-		font-style: italic;
-		font-family: $typogrify-font;
-		line-height: 0;
-	}
-}
-
-h1 { font-size: 24px; line-height: 34px; margin-bottom: 8px; }
-h2 { font-size: 21px; line-height: 30px; margin-top: 24px; }
-h3 { font-size: 17px; line-height: 24px; margin-top: 24px; }
+h1 { font-size: 24px; line-height: 30px; }
+h2 { font-size: 20px; line-height: 30px; margin-top: 24px; }
 
 p {
-	margin: 0.5em 0 1.25em 0;
-
+	margin: 1em 0;
 	img { margin: 0; }
-	a { line-height: inherit; }
 }
 
 em { font-style: italic; }
-strong { font-weight: bold; color: #333; }
+strong { font-weight: bold; }
 small { font-size: 80%; }
 
 blockquote {
@@ -108,9 +88,7 @@ hr {
 	border: none;
 	height: 1px;
 	background-color: #ebebeb;
-	margin: 20px 5px;
-
-	&.large { height: 3px; margin: 10px; }
+	margin: 10px 5px;
 }
 
 a {
@@ -150,6 +128,17 @@ ul, ol {
 
 ul { list-style: square outside; }
 ol { list-style: decimal; }
+
+table:not(.codehilitetable) {
+	th, td {
+	  padding: 12px 15px;
+	  text-align: left;
+	  border-bottom: 1px solid #E1E1E1;
+
+	  &:first-child { padding-left: 0; }
+	  &:last-child { padding-right: 0; }
+	}
+}
 
 abbr, acronym, .abbr {
 	cursor: help;
@@ -283,14 +272,8 @@ footer p {
 }
 
 #bio {
-	font-size: 85%;
+	font-size: 12px;
 	line-height: 18px;
-	color: #666;
-}
-
-#sidebar-links a {
-	line-height: 18px;
-	font-weight: normal;
 }
 
 #sidebar-divider {
@@ -298,20 +281,20 @@ footer p {
 }
 
 .title {
-	clear: both;
 	float: left;
 }
 
 .date {
-	@extend h6;
 	float: right;
 	display: block;
-	margin: 6px 10px;
+	line-height: 30px;
 }
 
 .content {
 	clear: both;
 	overflow: hidden;
+
+	hr { margin: 25px 10px; }
 }
 
 #view-archives {

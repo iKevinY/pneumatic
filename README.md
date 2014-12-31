@@ -40,5 +40,3 @@ Here are theme-specific settings that should be present in the Pelican configura
 ![Index Page](screenshots/index.png?raw=true)
 
 ![Article](screenshots/article.png?raw=true)
-
-![Archive](screenshots/archive.png?raw=true)

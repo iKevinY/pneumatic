@@ -10,10 +10,15 @@ Pneumatic is a minimalist, single-author [Pelican](http://getpelican.com) theme 
 
 ## Configuration
 
-- The files in [static/images](static/images) should be replaced appropriately. **This is important**!
+- The files in [static/images](static/images) should be replaced appropriately. *Use your avatar, not mine*!
 - There are intentionally no author, category, and tag page templates, so `AUTHORS_SAVE_AS`, `CATEGORY_SAVE_AS`, `CATEGORIES_SAVE_AS`, and `TAGS_SAVE_AS` should all be set to `''`.
 - [`pygments.css`](static/pygments.css) can be modified to change the syntax highlighting colour scheme.
-- CodeHilite line numbers should be enabled (ie. `MD_EXTENSIONS = [codehilite(linenums=True)]`).
+- CodeHilite line numbers should be enabled in Pelican's configuration file:
+
+  ```python
+  MD_EXTENSIONS = [codehilite(linenums=True)]
+  ```
+
 - Some font and colour choices can be customized in [`pneumatic.scss`](static/pneumatic.scss).
 
 Here are theme-specific settings that should be present in the Pelican configuration file:

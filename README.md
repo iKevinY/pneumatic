@@ -1,6 +1,6 @@
 # Pneumatic
 
-Pneumatic is a minimalist, single-author [Pelican](http://getpelican.com) theme derived from a [theme](https://github.com/gjreda/gregreda.com/tree/master/theme/simply) developed by [Greg Reda](http://www.gregreda.com). It was named due to the fact that it is based on the [Skeleton](http://www.getskeleton.com) framework, and pelicans (like most birds) possess [skeletal pneumaticity](http://en.wikipedia.org/wiki/Skeletal_pneumaticity).
+Pneumatic is a minimalist, single-author [Pelican](http://getpelican.com) theme derived from a [theme](https://github.com/gjreda/gregreda.com/tree/master/theme/simply) developed by [Greg Reda](http://www.gregreda.com). It was named due to the fact that it is based on the [Skeleton](http://www.getskeleton.com) framework, and pelicans (like most birds) possess [skeletal pneumaticity](http://en.wikipedia.org/wiki/Skeletal_pneumaticity). Visit **[kevinyap.ca](http://kevinyap.ca)** to see Pneumatic in action.
 
 ## Requirements
 

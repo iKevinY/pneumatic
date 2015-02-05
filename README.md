@@ -45,3 +45,7 @@ Here are theme-specific settings that should be present in the Pelican configura
 ![Index Page](screenshots/index.png?raw=true)
 
 ![Article](screenshots/article.png?raw=true)
+
+## License
+
+Pneumatic is licensed under the [MIT License](https://github.com/iKevinY/EulerPy/blob/master/LICENSE).

@@ -5,11 +5,11 @@
 {% block content %}
 	<h1 class="title"><a href="/archive/">Archive</a></h1>
 	<div class="content">
-		{% for year, date_year in dates | groupby('date.year') | sort(reverse=True) %}
-		<h2><a href="/{{ date_year[0].date.strftime('%Y')}}/">{{ date_year[0].date.strftime('%Y') }}</a></h2>
+		{% for year, articles in dates | groupby('date.year') | sort(reverse=True) %}
+		<h2><a href="/{{ year }}/">{{ year }}</a></h2>
 		<ul>
-			{% for article in date_year | sort(attribute='date', reverse=True) %}
-			<li>{{ article.locale_date }} &raquo; <a href="/{{ article.url }}">{{ article.title }}</a></li>
+			{% for article in articles | sort(attribute='date', reverse=True) %}
+			<li><a href="/{{ article.url }}">{{ article.title }}</a> &raquo; {{ article.locale_date }}</li>
 			{% endfor %}
 		</ul>
 		{% endfor %}

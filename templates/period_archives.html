@@ -6,14 +6,14 @@
 {% block content %}
 	<h1>Archive for {{ period | reverse | join(' ') }}</h1>
 	<div class="content">
-	{% for year, date_year in dates | groupby('date.year') %}
-		{% for month, date_month in dates | groupby('date.month') %}
+	{% for year, _ in dates | groupby('date.year') %}
+		{% for month, articles in dates | groupby('date.month') %}
 			{% if not period[1] %}
-			<h2><a href="/{{ date_month[0].date.strftime('%Y/%m') }}/">{{ date_month[0].date.strftime('%B') }}</a></h2>
+			<h2><a href="/{{ articles[0].date.strftime('%Y/%m') }}/">{{ articles[0].date.strftime('%B') }}</a></h2>
 			{% endif %}
 			<ul>
-				{% for article in date_month | sort(attribute='date') %}
-				<li>{{ article.locale_date }} &raquo; <a href="/{{ article.url }}">{{ article.title }}</a></li>
+				{% for article in articles | sort(attribute='date') %}
+				<li><a href="/{{ article.url }}">{{ article.title }}</a> &raquo; {{ article.locale_date }}</li>
 				{% endfor %}
 			</ul>
 		{% endfor %}

@@ -10,7 +10,7 @@ Pneumatic is a minimalist, single-author [Pelican](http://getpelican.com) theme 
 
 ## Configuration
 
-- The files in [static/images](static/images) should be replaced appropriately. *Use your avatar, not mine*!
+- Create a directory containing all of the [relevant icons](https://github.com/iKevinY/iKevinY.github.io/tree/src/content/images/icons). Set `ICONS_PATH` to that directory's path (ex. `images/icons`) and ensure that it has been added to `STATIC_PATHS`.
 - There are intentionally no author, category, and tag page templates, so `AUTHORS_SAVE_AS`, `CATEGORY_SAVE_AS`, `CATEGORIES_SAVE_AS`, and `TAGS_SAVE_AS` should all be set to `''`.
 - [`pygments.css`](static/pygments.css) can be modified to change the syntax highlighting colour scheme.
 - CodeHilite line numbers should be enabled in Pelican's configuration file:
@@ -28,6 +28,7 @@ Here are theme-specific settings that should be present in the Pelican configura
 | `SITENAME`          | Text displayed under avatar in sidebar                 |
 | `BIO_TEXT`          | Text displayed under site name                         |
 | `FOOTER_TEXT`       | Text displayed in site footer                          |
+| `ICONS_PATH`        | Location of site icons (ex. `images/icons`)            |
 | `SITE_AUTHOR`       | Used for author `<meta>`                               |
 | `TWITTER_USERNAME`  | Used for Twitter Cards `<meta>`                        |
 | `GOOGLE_PLUS_URL`   | Used for Google+ `<meta>`                              |

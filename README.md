@@ -1,6 +1,6 @@
 # Pneumatic
 
-Pneumatic is a minimalist, single-author [Pelican][pelican] theme derived from
+Pneumatic is a minimalistic, single-author [Pelican][pelican] theme derived from
 a [theme][simply] developed by [Greg Reda][greg-reda]. It was named due to the
 fact that it is based on the [Skeleton][skeleton] framework, and pelicans
 (like most birds) possess [skeletal pneumaticity][pneumaticity]. Visit

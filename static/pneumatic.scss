@@ -317,21 +317,22 @@ footer p {
 @media #{$handheld} {
 	// On mobile, sidebar has a fixed width (approximately the width
 	// of a typical phone in portrait) and is centred at top of page
+	.container {
+		padding-top: 3px;
+	}
+
 	#sidebar {
-		position: absolute;
 		width: 280px;
 		margin: 0 auto;
-		padding: 0 4px;
-		top: 8px;
-		left: 0;
-		right: 0;
+		padding-top: 5px;
+		vertical-align: middle;
 
 		div { margin: 5px 0; }
 	}
 
 	#avatar { float: left; }
 	#social .icon { padding: 0 1px; }
-	article { margin-top: 120px !important; }
+	article { margin-top: 14px; }
 }
 
 @media #{$mobile} {

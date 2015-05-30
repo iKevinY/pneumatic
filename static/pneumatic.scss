@@ -277,6 +277,10 @@ footer p {
 	line-height: 18px;
 }
 
+#sidebar-links {
+	color: #aaa;
+}
+
 #sidebar-divider {
 	display: none;  // only appears on mobile
 }
@@ -352,6 +356,5 @@ footer p {
 	}
 
 	p a:after { content:" ["attr(href)"]"; }
-
 	.linenos { border-right: none }
 }

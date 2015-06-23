@@ -111,6 +111,7 @@ a {
 
 		&:hover {
 			text-decoration: none;
+			color: #222;
 			@each $icon, $colour in $social-icons {
 				&.fa-#{$icon} { color: $colour; }
 			}

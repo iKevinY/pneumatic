@@ -17,7 +17,7 @@
 		<h1 class="title"><a href="{{ article.url }}" title="{{ article.title | striptags }}">{{ article.title }}</a></h1>
 		<time class="date" datetime="{{ article.date }}">{{ article.locale_date }}</time>
 		<div class="content">
-			<p>{{ article.summary | striptags }} <a class="read-more" href="{{ article.url }}">read more</a></p>
+			<p>{{ article.summary | striptags }}</p>
 		</div>
 		{% if not loop.last %}<br>{% endif %}
 	{% endfor %}

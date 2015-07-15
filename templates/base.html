@@ -48,19 +48,19 @@
 
 <body>
 	<div class="container">
-		<aside id="sidebar" class="side-column">
+		<aside>
 			<a href="/"><img id="avatar" alt="Site Avatar" src="/{{ ICONS_PATH }}/avatar.png"></a>
-			<div id="logo" class="text-center"><a href="/">{{ SITENAME }}</a></div>
-			<div id="bio" class="text-center">{{ BIO_TEXT }}</div>
+			<div id="logo" class="sidebar"><a href="/">{{ SITENAME }}</a></div>
+			<div id="bio" class="sidebar">{{ BIO_TEXT }}</div>
 
 			{% if SIDEBAR_LINKS %}
-			<div id="sidebar-links" class="text-center">
+			<div id="sidebar-links" class="sidebar">
 				{{ SIDEBAR_LINKS | join("&nbsp;&nbsp;|&nbsp;&nbsp;") }}
 			</div>
 			{% endif %}
 
 			{% if SOCIAL_ICONS %}
-			<div id="social" class="text-center">
+			<div id="social" class="sidebar">
 				{% for link, title, icon in SOCIAL_ICONS %}
 				<a href="{{ link }}" title="{{ title }}" class="icon fa {{ icon }}"></a>
 				{% endfor %}

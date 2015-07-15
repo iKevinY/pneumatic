@@ -203,7 +203,7 @@ code {
 	margin: 12px 0;
 }
 
-.text-center { text-align: center; }
+.sidebar { text-align: center; }
 
 
 // Layout
@@ -227,7 +227,7 @@ html, body {
 	@media #{$desktop} {
 		@mixin column { margin: 0 10px; }
 
-		.side-column {
+		aside {
 			@include column;
 			float: left;
 			width: 160px;
@@ -253,7 +253,7 @@ footer p {
 	padding-bottom: 10px;
 }
 
-#sidebar div {
+aside div {
 	margin: 12px 0;
 }
 
@@ -323,7 +323,7 @@ footer p {
 		padding-top: 3px;
 	}
 
-	#sidebar {
+	aside {
 		max-width: 280px;
 		margin: 0 auto;
 		padding-top: 5px;
@@ -347,7 +347,7 @@ footer p {
 }
 
 @media only print {
-	footer, #sidebar, #disqus_thread, #related-articles, #back-to-home {
+	footer, aside, #disqus_thread, #related-articles, #back-to-home {
 		display: none !important;
 	}
 

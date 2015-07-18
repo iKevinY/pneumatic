@@ -35,10 +35,9 @@
 	<meta name="application-name" content="{{ SITENAME }}">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-TileImage" content="/{{ ICONS_PATH }}/mstile-144x144.png">
-	<meta name="msapplication-square70x70logo" content="/{{ ICONS_PATH }}/mstile-small.png">
-	<meta name="msapplication-square150x150logo" content="/{{ ICONS_PATH }}/mstile-medium.png">
-	<meta name="msapplication-wide310x150logo" content="/{{ ICONS_PATH }}/mstile-wide.png">
-	<meta name="msapplication-square310x310logo" content="/{{ ICONS_PATH }}/mstile-large.png">
+	{% for name, size in (('square70x70', 'small'), ('square150x150', 'medium'), ('wide310x150', 'wide'), ('square310x310', 'large')) %}
+	<meta name="msapplication-{{ name }}logo" content="/{{ ICONS_PATH }}/mstile-{{ size }}.png">
+	{% endfor %}
 
 	<!--[if lt IE 9]>
 	<script src="/theme/js/html5shiv.min.js"></script>

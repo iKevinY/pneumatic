@@ -45,6 +45,7 @@ Here are theme-specific settings that should be present in the Pelican configura
 | `SIDEBAR_LINKS`     | List of anchor elements to be displayed under bio text |
 | `GOOGLE_FONTS`      | List of fonts to import from Google Fonts              |
 | `SOCIAL_ICONS`      | List of tuples in the form `(link, title, icon-class)` |
+| `THEME_COLOR`       | Primary colour of the site (ex. `#000000`)             |
 | `DISQUS_SITENAME`   | Disqus shortname (optional)                            |
 | `GOOGLE_ANALYTICS`  | Google Analytics tracking code (optional)              |
 | `DOMAIN`            | Used for Google Analytics and Twitter Cards `<meta>`   |

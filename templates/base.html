@@ -32,7 +32,9 @@
 	<link rel="icon" type="image/png" href="/{{ ICONS_PATH }}/favicon-{{ size }}x{{ size }}.png" sizes="{{ size }}x{{ size }}">
 	{% endfor %}
 
-	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="{{ THEME_COLOR }}">
+
+	<meta name="msapplication-TileColor" content="{{ THEME_COLOR }}">
 	<meta name="msapplication-TileImage" content="/{{ ICONS_PATH }}/mstile-144x144.png">
 	{% for name, size in (('square70x70', 'small'), ('square150x150', 'medium'), ('wide310x150', 'wide'), ('square310x310', 'large')) %}
 	<meta name="msapplication-{{ name }}logo" content="/{{ ICONS_PATH }}/mstile-{{ size }}.png">

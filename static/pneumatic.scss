@@ -50,12 +50,23 @@ body {
 	-webkit-text-size-adjust: 100%;
 }
 
-h1 { font-size: 24px; line-height: 30px; }
-h2 { font-size: 20px; line-height: 30px; margin-top: 24px; }
-
-p {
-	margin: 1em 0;
+article p {
+	font-size: 15px;
+	line-height: 25px;
+	margin: 1.25em 0;
 	img { margin: 0; }
+}
+
+h1, h2 { font-weight: bold; }
+
+h1 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+h2 {
+	font-size: 20px;
+	margin-top: 30px;
 }
 
 em { font-style: italic; }
@@ -67,8 +78,6 @@ blockquote {
 	border-left: 2px solid #ddd;
 
 	p {
-		font-size: 14px;
-		line-height: 21px;
 		color: #777;
 		font-style: normal;
 		margin: 3px 0;
@@ -249,8 +258,9 @@ article img {
 }
 
 footer p {
-	text-align: center;
+	margin: 12px 0;
 	padding-bottom: 10px;
+	text-align: center;
 }
 
 aside div {
@@ -298,6 +308,10 @@ aside div {
 	overflow: hidden;
 
 	hr { margin: 25px 10px; }
+}
+
+.summary p {
+	margin-bottom: 4px;
 }
 
 #view-archives {

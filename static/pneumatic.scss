@@ -218,7 +218,7 @@ html, body {
 
 .container {
 	position: relative;
-	width: 960px;
+	width: 900px;
 	margin: 0 auto;
 	padding-top: 50px;
 
@@ -237,7 +237,7 @@ html, body {
 		.main-column {
 			@include column;
 			float: right;
-			width: 700px;
+			width: 640px;
 		}
 	}
 }

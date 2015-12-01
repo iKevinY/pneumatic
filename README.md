@@ -76,4 +76,4 @@ Pneumatic is licensed under the [MIT License][mit-license].
 [pygments.css]: static/pygments.css
 [pneumatic.scss]: static/pneumatic.scss
 
-[mit-license]: https://github.com/iKevinY/EulerPy/blob/master/LICENSE
+[mit-license]: https://github.com/iKevinY/pneumatic/blob/master/LICENSE

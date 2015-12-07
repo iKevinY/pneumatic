@@ -54,7 +54,6 @@ article p {
 	font-size: 15px;
 	line-height: 25px;
 	margin: 1.25em 0;
-	img { margin: 0; }
 }
 
 h1, h2 { font-weight: bold; }
@@ -127,7 +126,7 @@ a {
 }
 
 ul, ol {
-	margin: 12px 0 12px 30px;
+	margin: 1.25em 2.25em;
 
 	ul, ol {
 		font-size: 95%;
@@ -228,25 +227,6 @@ html, body {
 	width: 900px;
 	margin: 0 auto;
 	padding-top: 50px;
-
-	@media only print { width: 80%; margin-top: -20px; }
-	@media #{$handheld} { width: 90%; }
-	@media #{$desktop} {
-		@mixin column { margin: 0 10px; }
-
-		aside {
-			@include column;
-			float: left;
-			width: 160px;
-			position: fixed;
-		}
-
-		.main-column {
-			@include column;
-			float: right;
-			width: 640px;
-		}
-	}
 }
 
 article img {
@@ -329,11 +309,27 @@ aside div {
 
 // Media Queries
 
+@media #{$desktop} {
+	aside, article, footer { margin: 0 10px; }
+
+	aside {
+		float: left;
+		width: 160px;
+		position: fixed;
+	}
+
+	article, footer {
+		float: right;
+		width: 640px;
+	}
+}
+
 @media #{$handheld} {
-	// On mobile, sidebar has a fixed width (approximately the width
-	// of a typical phone in portrait) and is centred at top of page
+	// On non-desktop displays, fix the width of the
+	// sidebar, and centre it at the top of the page.
 	.container {
 		padding-top: 3px;
+		width: 90%;
 	}
 
 	aside {
@@ -364,6 +360,7 @@ aside div {
 		display: none !important;
 	}
 
+	.container { width: 85%; }
 	p a:after { content:" ["attr(href)"]"; }
-	.linenos { border-right: none }
+	.linenos { border-right: none; }
 }

@@ -50,17 +50,17 @@
 	<div class="container">
 		<aside>
 			<a href="/"><img id="avatar" alt="Site Avatar" src="/{{ ICONS_PATH }}/avatar.png"></a>
-			<div id="logo" class="sidebar"><a href="/">{{ SITENAME }}</a></div>
-			<div id="bio" class="sidebar">{{ BIO_TEXT }}</div>
+			<div id="logo"><a href="/">{{ SITENAME }}</a></div>
+			<div id="bio">{{ BIO_TEXT }}</div>
 
 			{% if SIDEBAR_LINKS %}
-			<div id="sidebar-links" class="sidebar">
+			<div id="sidebar-links">
 				{{ SIDEBAR_LINKS | join("&nbsp;&nbsp;|&nbsp;&nbsp;") }}
 			</div>
 			{% endif %}
 
 			{% if SOCIAL_ICONS %}
-			<div id="social" class="sidebar">
+			<div id="social">
 				{% for link, title, icon in SOCIAL_ICONS %}
 				<a href="{{ link }}" title="{{ title }}" class="icon fa {{ icon }}"></a>
 				{% endfor %}

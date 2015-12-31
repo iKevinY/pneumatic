@@ -86,6 +86,7 @@ blockquote {
 
 	cite {
 		display: block;
+		padding-top: 5px;
 		font-size: 0.85em;
 		color: #555;
 		&:before { content: "\2014 \0020"; }

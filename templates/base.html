@@ -19,7 +19,11 @@
 	<link href="https://fonts.googleapis.com/css?family={{ GOOGLE_FONTS | join('|') | replace(' ', '+') }}" rel="stylesheet" type="text/css">
 	{% endif %}
 	{% if SOCIAL_ICONS %}
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet">
+	{% if FA_EMBED_CODE %}
+	<link rel="stylesheet" href="https://use.fontawesome.com/{{ FA_EMBED_CODE }}.css">
+	{% else %}
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	{% endif %}
 	{% endif %}
 
 	<!-- Favicons -->

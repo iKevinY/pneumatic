@@ -44,6 +44,7 @@ Here are theme-specific settings that should be present in the Pelican configura
 | `DISQUS_SITENAME`   | Disqus shortname (optional)                            |
 | `GOOGLE_ANALYTICS`  | Google Analytics tracking code (optional)              |
 | `DOMAIN`            | Used for Google Analytics and Twitter Cards `<meta>`   |
+| `FA_EMBED_CODE`     | Font Awesome CDN embed code (optional)                 |
 
 ## Screenshots
 

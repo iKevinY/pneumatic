@@ -12,8 +12,6 @@
 $main-font: "Nunito Sans", sans-serif;
 $code-font: "Source Code Pro", monospace;
 
-$accent-colour: #FF8000;
-
 $social-icons: (
 	"twitter" #55acee,
 	"google-plus-square" #dd4b39,
@@ -177,15 +175,13 @@ code {
 	font: 0.85em/1.5 $code-font;
 	overflow-x: auto;
 	display: block;
-	border-left: 3px solid $accent-colour;
-	border-radius: 2px;
 	padding: 0.8em 0;
 
 	tbody tr { display: block; } // fixes line numbers on Firefox
 }
 
 .linenos {
-	border-right: 1px solid #3d3d3d;
+	border-right: 1px solid #ccc;
 	padding: 0 0.7em;
 	width: 1.2em;
 	text-align: right;

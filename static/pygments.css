@@ -3,7 +3,7 @@
  * https://github.com/aahan/pygments-github-style
  */
 
-.codehilitetable { background-color: #f8f8f8; border: 1px solid #ccc; border-radius: 3px; }
+.codehilitetable, .content > .codehilite { background-color: #f8f8f8; border: 1px solid #ccc; border-radius: 3px; }
 .linenos { background-color: #f8f8f8; color: #999988; }
 .c { color: #999988; font-style: italic; }
 .err { color: #a61717; background-color: #e3d2d2; }

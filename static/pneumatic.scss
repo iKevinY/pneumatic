@@ -171,7 +171,7 @@ code {
 	border-radius: 3px;
 }
 
-.codehilitetable {
+.codehilitetable, .content > .codehilite {
 	font: 0.85em/1.5 $code-font;
 	overflow-x: auto;
 	display: block;
@@ -193,8 +193,12 @@ code {
 	user-select: none;
 }
 
-.codehilite {
+.code .codehilite {
 	margin: 0 1em 0 3.5em;
+}
+
+.content > .codehilite {
+	padding: 1em;
 }
 
 .admonition {

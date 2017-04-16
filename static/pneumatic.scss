@@ -141,12 +141,15 @@ ul { list-style: square outside; }
 ol { list-style: decimal; }
 
 table:not(.codehilitetable) {
-	th, td {
-		padding: 12px 15px;
-		border-bottom: 1px solid #e1e1e1;
+	margin: 0 auto 2em;
 
-		&:first-child { padding-left: 0; }
-		&:last-child { padding-right: 0; }
+	th, td {
+		padding: 12px;
+		border-bottom: 1px solid #e1e1e1;
+	}
+
+	thead th {
+		padding-top: 0;
 	}
 }
 

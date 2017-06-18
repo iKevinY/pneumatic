@@ -22,7 +22,15 @@ Pneumatic requires [Sass] and two Pelican plugins: [Neighbours] and [Assets].
 - CodeHilite line numbers should be enabled in Pelican's configuration file:
 
   ```python
-  MD_EXTENSIONS = [codehilite(linenums=True)]
+  # Pelican 3.7+
+  MARKDOWN = {
+      'extension_configs': {
+          'markdown.extensions.codehilite': {'linenums': True}
+      }
+  }
+
+  # Pelican 3.6 and older
+  MD_EXTENSIONS = ['codehilite(linenums=True)']
   ```
 
 Here are theme-specific settings that should be present in the Pelican configuration file:

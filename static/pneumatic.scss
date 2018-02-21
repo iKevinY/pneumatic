@@ -282,6 +282,7 @@ aside div {
 
 .title {
 	float: left;
+	margin-bottom: 0.5em;
 }
 
 .date {
@@ -292,8 +293,6 @@ aside div {
 
 .content {
 	clear: both;
-	overflow: hidden;
-
 	hr { margin: 25px 10px; }
 }
 
@@ -308,7 +307,7 @@ aside div {
 
 #back-to-home, #related-articles {
 	overflow: auto;
-	margin-top: 20px;
+	margin-top: 3em;
 }
 
 #next-neighbour { float: left; }
@@ -360,6 +359,7 @@ aside div {
 		text-align: center;
 		float: none;
 		line-height: 1.25;
+		margin-bottom: 0;
 	}
 
 	#sidebar-divider { display: block; }

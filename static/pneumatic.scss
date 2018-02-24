@@ -9,10 +9,8 @@
 
 // Theme Variables
 
-$main-font: "Raleway", sans-serif;
-$code-font: "Source Code Pro", monospace;
-
-$accent-colour: #FF8000;
+$main-font: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Helvetica, Arial, sans-serif;
+$code-font: Consolas, Menlo, Courier, monospace;
 
 $social-icons: (
 	"twitter" #55acee,
@@ -44,23 +42,23 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 body {
 	background: #fff;
-	font: 14px/23px $main-font;
+	font-family: $main-font;
+	font-size: 14px;
+	line-height: 1.6;
 	color: #222;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
 }
 
 article p {
-	font-size: 1.1em;
-	line-height: 1.7;
 	margin: 1.25em 0;
+	line-height: 1.8;
 }
 
 h1, h2, h3 { font-weight: bold; }
 
 h1 {
 	font-size: 1.7em;
-	margin-bottom: 4px;
 }
 
 h2 {
@@ -175,19 +173,17 @@ code {
 	border-radius: 3px;
 }
 
-.codehilitetable {
+.codehilitetable, .content > .codehilite {
 	font: 0.85em/1.5 $code-font;
 	overflow-x: auto;
 	display: block;
-	border-left: 3px solid $accent-colour;
-	border-radius: 2px;
 	padding: 0.8em 0;
 
 	tbody tr { display: block; } // fixes line numbers on Firefox
 }
 
 .linenos {
-	border-right: 1px solid #3d3d3d;
+	border-right: 1px solid #ccc;
 	padding: 0 0.7em;
 	width: 1.2em;
 	text-align: right;
@@ -199,8 +195,12 @@ code {
 	user-select: none;
 }
 
-.codehilite {
+.code .codehilite {
 	margin: 0 1em 0 3.5em;
+}
+
+.content > .codehilite {
+	padding: 1em;
 }
 
 .admonition {
@@ -263,13 +263,12 @@ aside div {
 }
 
 #name {
-	font-size: 1.8em;
+	font-size: 2em;
 	line-height: 1.35;
 	letter-spacing: -0.5px;
 }
 
 #bio {
-	font-size: 0.85em;
 	line-height: 1.5;
 }
 
@@ -283,17 +282,17 @@ aside div {
 
 .title {
 	float: left;
+	margin-bottom: 0.5em;
 }
 
 .date {
+	padding-top: 0.5em;
 	float: right;
 	display: block;
 }
 
 .content {
 	clear: both;
-	overflow: hidden;
-
 	hr { margin: 25px 10px; }
 }
 
@@ -308,7 +307,7 @@ aside div {
 
 #back-to-home, #related-articles {
 	overflow: auto;
-	margin-top: 20px;
+	margin-top: 3em;
 }
 
 #next-neighbour { float: left; }
@@ -350,6 +349,7 @@ aside div {
 	}
 
 	#avatar { float: left; }
+	#bio { font-size: 0.85em; }
 	#social .icon { padding: 0 1px; }
 	article { margin-top: 14px; }
 }
@@ -359,6 +359,7 @@ aside div {
 		text-align: center;
 		float: none;
 		line-height: 1.25;
+		margin-bottom: 0;
 	}
 
 	#sidebar-divider { display: block; }

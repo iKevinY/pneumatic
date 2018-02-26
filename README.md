@@ -6,17 +6,22 @@ possess [skeletal pneumaticity]. See the theme in action at **[kevinyap.ca]**.
 
 ![Pneumatic Screenshots](.github/screenshots.png?raw=true)
 
-> _Note: the current version of Pneumatic uses the newly-popularized [system font
-stack]. To use the older version of the theme whose font stack was based on
+Here's a summary of Pneumatic's selling points:
+
+- 100% JavaScript-free by default (minus [legacy IE compatibility scripts]).
+- No authors, categories, or tags — full minimalism!
+- Configurable sidebar icons via Font Awesome.
+- Responsive layout (sidebar turns into a header on small devices).
+- Modern [system font stack] based on San Francisco and Segoe UI.
+- Optional Google Analytics and Disqus integration.
+
+> _Note: To use the older version of the theme whose font stack was based on
 Google Fonts, refer to [`pneumatic@v1.0`]._
 
+## Setup
 
-## Requirements
-
-Pneumatic requires [Sass] and two Pelican plugins: [Neighbours] and [Assets].
-
-## Configuration
-
+- Install [Sass] and two Pelican plugins: [Neighbours] and [Assets].
+  **These are required dependencies.**
 - Create a directory containing all of the [relevant icons]. Set `ICONS_PATH`
   to that directory's path (ex. `images/icons`) and ensure that it has been
   added to `STATIC_PATHS`.
@@ -70,6 +75,7 @@ Pneumatic is licensed under the [MIT License].
 [skeletal pneumaticity]: http://en.wikipedia.org/wiki/Skeletal_pneumaticity
 [kevinyap.ca]: http://kevinyap.ca
 
+[legacy IE compatibility scripts]: https://github.com/iKevinY/pneumatic/blob/be36413d72870eb182d3c75303922b1e6a5ccb25/templates/base.html#L47-L50
 [system font stack]: https://css-tricks.com/snippets/css/system-font-stack/
 [`pneumatic@v1.0`]: https://github.com/iKevinY/pneumatic/tree/v1.0
 

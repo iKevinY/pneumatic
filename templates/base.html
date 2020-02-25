@@ -27,15 +27,9 @@
 	{% endif %}
 
 	<!-- Favicons -->
-	<link rel="apple-touch-icon" href="/{{ ICONS_PATH }}/apple-touch-icon.png">
-	{% for size in (57, 60, 72, 76, 114, 120, 144, 152, 180) %}
-	<link rel="apple-touch-icon" sizes="{{ size }}x{{ size }}" href="/{{ ICONS_PATH }}/apple-touch-icon-{{ size }}x{{ size }}.png">
-	{% endfor %}
-
-	{% for size in (16, 32, 96, 160, 196) %}
-	<link rel="icon" type="image/png" href="/{{ ICONS_PATH }}/favicon-{{ size }}x{{ size }}.png" sizes="{{ size }}x{{ size }}">
-	{% endfor %}
-
+	<link rel="apple-touch-icon" sizes="180x180" href="/{{ ICONS_PATH }}/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/{{ ICONS_PATH }}/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="/{{ ICONS_PATH }}/favicon-32x32.png" sizes="32x32">
 	<meta name="theme-color" content="{{ THEME_COLOR }}">
 
 	<meta name="msapplication-TileColor" content="{{ THEME_COLOR }}">
@@ -59,7 +53,7 @@
 
 			{% if SIDEBAR_LINKS %}
 			<div id="sidebar-links">
-				{{ SIDEBAR_LINKS | join("&nbsp;&nbsp;|&nbsp;&nbsp;") }}
+				{{ SIDEBAR_LINKS | join("&nbsp;|&nbsp;") }}
 			</div>
 			{% endif %}
 

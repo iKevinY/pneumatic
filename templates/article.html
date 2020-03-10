@@ -34,6 +34,15 @@
 	</div>
 	{% endif %}
 
+	{% if BUTTONDOWN_LINK and articles and article.url == articles[0].url %}
+	<div class="admonition">
+		<p>
+			I'm experimenting with an email newsletter where I post less structured thoughts on a more
+			regular basis. <a href="{{ BUTTONDOWN_LINK }}">Subscribe here if you're interested!</a>
+		</p>
+	</div>
+	{% endif %}
+
 	{% if DISQUS_SITENAME and article.status != "draft" %}
 	<hr>
 

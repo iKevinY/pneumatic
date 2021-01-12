@@ -370,8 +370,10 @@ aside div {
 		text-align: center;
 		float: none;
 		line-height: 1.25;
-		margin-bottom: 0;
 	}
+
+	.title { margin-bottom: 0; }
+	.date { margin-bottom: 1.5em; }
 
 	#sidebar-divider { display: block; }
 }

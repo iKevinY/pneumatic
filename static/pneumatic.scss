@@ -170,7 +170,7 @@ abbr, acronym, .abbr {
 	top: -0.7em;
 }
 
-p > code {
+code:not(pre code) {
 	font-family: $code-font;
 	color: #6e6b5e;
 	background: #f5f5f5;

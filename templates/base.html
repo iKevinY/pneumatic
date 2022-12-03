@@ -7,6 +7,7 @@
 	<meta name="description" content="{% block description %}{% endblock %}">
 	<meta name="author" content="{{ SITE_AUTHOR }}">
 	<link rel="author" href="{{ GOOGLE_PLUS_URL }}"/>
+	{% if MASTODON_URL %}<link rel="me" href="{{ MASTODON_URL }}">{% endif %}
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	{% block meta %}{% endblock %}

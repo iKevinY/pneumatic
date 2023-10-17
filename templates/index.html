@@ -13,13 +13,16 @@
 {% endblock %}
 
 {% block content %}
-	{% for article in articles[:4] %}
-		<h1 class="title"><a href="{{ article.url }}" title="{{ article.title | striptags }}">{{ article.title }}</a></h1>
-		<time class="date" datetime="{{ article.date }}">{{ article.locale_date }}</time>
-		<div class="content summary">
-			<p>{{ article.summary | striptags | replace(' …', ' ...') | replace(' ...', '&nbsp;&#8230;') }}</p>
-		</div>
-		{% if not loop.last %}<br>{% endif %}
+	{{ page.content }}
+
+	<div>Here's some stuff I wrote (somewhat) recently:</div>
+	<ul style="list-style-type: none;">
+	{% for article in articles[:5] %}
+		<li>
+			<strong><a href="{{ article.url }}" title="{{ article.title | striptags }}">{{ article.title }}</a></strong>
+			<time style="float: right;" datetime="{{ article.date }}">{{ article.locale_date }}</time>
+		</li>
 	{% endfor %}
-	<div id="view-archives"><a href="/archive/">Older Posts &raquo;</a></div>
+	</ul>
+	<div id="view-archives"><a href="/archive/">Blog Archive &raquo;</a></div>
 {% endblock %}

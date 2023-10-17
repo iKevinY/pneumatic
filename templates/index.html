@@ -15,14 +15,14 @@
 {% block content %}
 	{{ page.content }}
 
-	<div>Here's some stuff I wrote (somewhat) recently:</div>
-	<ul style="list-style-type: none;">
+	<p>Here are some of my recent blog posts (or browse the <a href="/archive/">full archive here</a>):</p>
+
+	<ul>
 	{% for article in articles[:5] %}
 		<li>
 			<strong><a href="{{ article.url }}" title="{{ article.title | striptags }}">{{ article.title }}</a></strong>
-			<time style="float: right;" datetime="{{ article.date }}">{{ article.locale_date }}</time>
+			(<time datetime="{{ article.date }}">{{ article.date.year }}</time>)
 		</li>
 	{% endfor %}
 	</ul>
-	<div id="view-archives"><a href="/archive/">Blog Archive &raquo;</a></div>
 {% endblock %}

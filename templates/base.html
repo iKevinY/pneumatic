@@ -23,7 +23,7 @@
 	{% if FA_EMBED_CODE %}
 	<link rel="stylesheet" href="https://use.fontawesome.com/{{ FA_EMBED_CODE }}.css">
 	{% else %}
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
 	{% endif %}
 	{% endif %}
 
@@ -61,7 +61,7 @@
 			{% if SOCIAL_ICONS %}
 			<div id="social">
 				{% for link, title, icon in SOCIAL_ICONS %}
-				<a href="{{ link }}" title="{{ title }}" class="icon fa {{ icon }}"></a>
+				<a href="{{ link }}" title="{{ title }}" class="icon {{ icon }}"></a>
 				{% endfor %}
 			</div>
 			{% endif %}

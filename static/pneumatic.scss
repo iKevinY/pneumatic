@@ -18,6 +18,7 @@ $social-icons: (
 	"github" #171515,
 	"soundcloud" #f70,
 	"instagram" #833ab4,
+	"bluesky" #1185fe,
 );
 
 
@@ -117,7 +118,7 @@ a {
 
 	&.icon {
 		padding: 0 2px;
-		font-size: 16px;
+		font-size: 18px;
 		color: #555;
 		transition: color 0.25s ease;
 

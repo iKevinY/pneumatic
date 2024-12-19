@@ -14,6 +14,12 @@
 	<meta property="og:image" content="{{ SITEURL }}/{{ ICONS_PATH }}/avatar.png">
 	<meta property="og:type" content="article">
 	<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
+	{% if article.bluesky %}
+	<meta property="bsky:url" content="{{ article.bluesky }}">
+	{% endif %}
+	{% if BLUESKY_HANDLE %}
+	<meta property="bsky:handle" content="{{ BLUESKY_HANDLE }}">
+	{% endif %}
 {% endblock %}
 
 {% block content %}
@@ -22,6 +28,7 @@
 	<div class="content">
 		{{ article.content }}
 	</div>
+	<div id="bluesky-comments"></div>
 
 	{% if article.next_article or article.prev_article %}
 	<div id="related-articles">
@@ -32,34 +39,5 @@
 		<a href="/{{ article.prev_article.url}}" id="prev-neighbour">{{ article.prev_article.title | striptags }} &raquo;</a>
 		{% endif %}
 	</div>
-	{% endif %}
-
-	{% if BUTTONDOWN_LINK and articles and article.url == articles[0].url %}
-	<div class="admonition">
-		<p>
-			I'm experimenting with an email newsletter where I post less structured thoughts on a more
-			regular basis. <a href="{{ BUTTONDOWN_LINK }}">Subscribe here if you're interested!</a>
-		</p>
-	</div>
-	{% endif %}
-
-	{% if DISQUS_SITENAME and article.status != "draft" %}
-	<hr>
-
-	<!-- Disqus -->
-	<div id="disqus_thread"></div>
-	<script>
-	var disqus_config = function() {
-		this.page.url = '{{ SITEURL }}/{{ article.url }}';
-		this.page.identifier = '{{ article.url }}';
-	};
-
-	(function() {
-		var d = document, s = d.createElement('script');
-		s.src = '//{{ DISQUS_SITENAME }}.disqus.com/embed.js';
-		s.setAttribute('data-timestamp', +new Date());
-		(d.head || d.body).appendChild(s);
-	})();
-	</script>
 	{% endif %}
 {% endblock %}

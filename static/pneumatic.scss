@@ -52,10 +52,14 @@ body {
 	-webkit-text-size-adjust: 100%;
 }
 
-article p {
+article p:not(#bluesky-comments p) {
 	font-size: 13px;
 	margin-bottom: 1.5em;
 	line-height: 1.75;
+}
+
+#bluesky-comments p {
+	font-size: 12px;
 }
 
 h1, h2, h3 { font-weight: bold; }
@@ -105,11 +109,14 @@ hr {
 	margin: 10px 5px;
 }
 
-a {
+a:not(#bluesky-comments a) {
 	color: #333;
 	text-decoration: none;
-	font-weight: bold;
 	outline: 0;
+	
+	&:not(a.icon) {
+		font-weight: bold;
+	}
 
 	&:hover, &:focus {
 		color: #000;
@@ -249,7 +256,7 @@ html, body {
 	padding-top: 50px;
 }
 
-article img {
+article img:not(#bluesky-comments img) {
 	max-width: 95%;
 	margin: 0 auto;
 	display: block;
@@ -363,8 +370,8 @@ aside div {
 	#avatar { float: left; width: 120px; }
 	#name { margin-top: 12px; }
 	#bio { font-size: 0.9em; }
-	#social .icon { padding: 0 1px; }
 	article { margin-top: 14px; }
+	.icon { padding: 0 1px !important; }
 }
 
 @media #{$mobile} {

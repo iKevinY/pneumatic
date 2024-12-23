@@ -41,36 +41,15 @@
 	{% for name, size in (('square70x70', 'small'), ('square150x150', 'medium'), ('wide310x150', 'wide'), ('square310x310', 'large')) %}
 	<meta name="msapplication-{{ name }}logo" content="/{{ ICONS_PATH }}/mstile-{{ size }}.png">
 	{% endfor %}
-
-	<!--[if lt IE 9]>
-	<script src="/theme/js/html5shiv.min.js"></script>
-	<script src="/theme/js/respond.min.js"></script>
-	<![endif]-->
 </head>
 
 <body>
 	<div class="container">
-		<aside>
+		<header>
 			<a href="/"><img id="avatar" alt="Site Avatar" src="/{{ ICONS_PATH }}/avatar.png"></a>
-			<div id="name"><a href="/">{{ SITENAME }}</a></div>
-			<div id="bio">{{ BIO_TEXT }}</div>
-
-			{% if SIDEBAR_LINKS %}
-			<div id="sidebar-links">
-				{{ SIDEBAR_LINKS | join("&nbsp;|&nbsp;") }}
-			</div>
-			{% endif %}
-
-			{% if SOCIAL_ICONS %}
-			<div id="social">
-				{% for link, title, icon in SOCIAL_ICONS %}
-				<a href="{{ link }}" title="{{ title }}" class="icon {{ icon }}"></a>
-				{% endfor %}
-			</div>
-			{% endif %}
-
-			<hr id="sidebar-divider">
-		</aside>
+			<a href="/">home</a> &bull;
+			<a href="/archive">writing</a>
+		</header>
 
 		<article>
 			{% block content %}{% endblock %}
@@ -78,7 +57,13 @@
 		</article>
 
 		<footer>
-			<p>{{ FOOTER_TEXT }}</p>
+			{% if SOCIAL_ICONS %}
+			<div id="social">
+				{% for link, title, icon in SOCIAL_ICONS %}
+				<a href="{{ link }}" title="{{ title }}" class="icon {{ icon }}"></a>
+				{% endfor %}
+			</div>
+			{% endif %}
 		</footer>
 	</div>
 

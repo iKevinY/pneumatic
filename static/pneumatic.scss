@@ -52,8 +52,27 @@ body {
 	-webkit-text-size-adjust: 100%;
 }
 
-article p:not(#bluesky-comments p) {
-	margin-bottom: 1.5em;
+header {
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+
+	img {
+		vertical-align: middle;
+	}
+	a {
+		padding: 10px;
+		text-decoration: none;
+		
+	}
+}
+
+article {
+	margin-top: 30px;	
+
+	p:not(#bluesky-comments p) {
+		margin-bottom: 1.5em;
+	}
 }
 
 #bluesky-comments p {
@@ -118,8 +137,8 @@ a:not(#bluesky-comments a) {
 
 	&.icon {
 		text-decoration: none;
-		padding: 0 2px;
-		font-size: 18px;
+		padding: 0 5px;
+		font-size: 20px;
 		color: #555;
 		transition: color 0.25s ease;
 
@@ -244,10 +263,9 @@ html, body {
 }
 
 .container {
-	position: relative;
-	width: 900px;
+	max-width: 640px;
 	margin: 0 auto;
-	padding-top: 50px;
+	padding-top: 30px;
 }
 
 article img:not(#bluesky-comments img) {
@@ -262,15 +280,8 @@ footer p {
 	text-align: center;
 }
 
-aside div {
-	margin: 11px 0;
-	text-align: center;
-}
-
 #avatar {
-	margin: 0 auto;
-	display: block;
-	width: 140px;
+	width: 40px;
 	border-radius: 15px;
 }
 
@@ -295,6 +306,12 @@ aside div {
 
 #sidebar-divider {
 	display: none;  // only appears on mobile
+}
+
+#social {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 20px;
 }
 
 .title {
@@ -337,42 +354,12 @@ aside div {
 
 // Media Queries
 
-@media #{$desktop} {
-	aside, article, footer { margin: 0 10px; }
-
-	aside {
-		float: left;
-		width: 160px;
-		position: fixed;
-	}
-
-	article, footer {
-		float: right;
-		width: 640px;
-	}
-}
+@media #{$desktop} {}
 
 @media #{$handheld} {
-	// On non-desktop displays, fix the width of the
-	// sidebar, and centre it at the top of the page.
 	.container {
-		padding-top: 3px;
 		width: 90%;
 	}
-
-	aside {
-		max-width: 300px;
-		margin: 0 auto;
-		padding-top: 10px;
-		vertical-align: middle;
-
-		div { margin: 7px 0; }
-	}
-
-	#avatar { float: left; width: 120px; }
-	#name { margin-top: 11px; }
-	#bio { font-size: 0.8em; line-height: 1.4 }
-	article { margin-top: 14px; }
 }
 
 @media #{$mobile} {
@@ -384,8 +371,6 @@ aside div {
 
 	.title { margin-bottom: 0; }
 	.date { margin-bottom: 1.5em; }
-
-	#sidebar-divider { display: block; }
 }
 
 @media only print {

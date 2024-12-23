@@ -193,6 +193,7 @@ abbr, acronym, .abbr {
 
 code:not(pre code) {
 	font-family: $code-font;
+	font-size: 90%;
 	color: #6e6b5e;
 	background: #f5f5f5;
 	padding: 0.1em 0.3em;
@@ -312,19 +313,6 @@ footer p {
 	}
 }
 
-#bio {
-	font-size: 0.8em;
-	line-height: 1.5;
-}
-
-#sidebar-links {
-	color: #aaa;
-}
-
-#sidebar-divider {
-	display: none;  // only appears on mobile
-}
-
 #social {
 	text-align: center;
 	padding-top: 10px;
@@ -351,8 +339,8 @@ footer p {
 	hr { margin: 25px 10px; }
 }
 
-.summary p {
-	margin-bottom: 6px;
+.period-archive {
+	margin-bottom: 16px;
 }
 
 #view-archives {

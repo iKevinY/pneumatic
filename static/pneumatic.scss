@@ -251,6 +251,23 @@ div.math {
 	overflow-x: scroll;
 }
 
+.archive-link {
+	margin-bottom: 1em;
+	a { text-decoration: none; }
+	h3 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
+.archive-meta {
+	font-size: 0.9em;
+	color: #777;
+	&:hover {
+		text-decoration: none;;
+	}
+}
+
 
 // Layout
 

@@ -1,17 +1,25 @@
 {% extends 'base.html' %}
 
-{% block title %}Archive | {{ SITENAME }}{% endblock %}
+{% block title %}Blog Archive | {{ SITENAME }}{% endblock %}
 
 {% block content %}
 	<h1 class="title"><a href="/archive/">Blog Archive</a></h1>
 	<div class="content">
 		{% for year, articles in dates | groupby('date.year') | sort(reverse=True) %}
 		<h2><a href="/{{ year }}/">{{ year }}</a></h2>
-		<ul>
-			{% for article in articles | sort(attribute='date', reverse=True) %}
-			<li><a href="/{{ article.url }}">{{ article.title }}</a> &raquo; {{ article.locale_date }}</li>
-			{% endfor %}
-		</ul>
+		{% for article in articles | sort(attribute='date', reverse=True) %}
+		<div class="archive-link">
+			<a href="/{{ article.url }}">
+				<h3>{{ article.title }}</h3>
+				<div class="archive-meta">
+					{{ article.locale_date }}
+					{% if article.readtime %}
+					&thinsp; &bull; &thinsp; {{article.readtime.minutes}} min read
+					{% endif %}
+				</div>
+			</a>
+		</div>
+		{% endfor %}
 		{% endfor %}
 	</div>
 	<div id="back-to-home"><a href="/">&laquo; Back to Home</a></div>

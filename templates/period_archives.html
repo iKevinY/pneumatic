@@ -11,11 +11,19 @@
 			{% if not period[1] %}
 			<h2><a href="/{{ articles[0].date.strftime('%Y/%m') }}/">{{ articles[0].date.strftime('%B') }}</a></h2>
 			{% endif %}
-			<ul>
-				{% for article in articles | sort(attribute='date') %}
-				<li><a href="/{{ article.url }}">{{ article.title }}</a> &raquo; {{ article.locale_date }}</li>
-				{% endfor %}
-			</ul>
+			{% for article in articles | sort(attribute='date') %}
+			<div class="archive-link">
+				<a href="/{{ article.url }}">
+					<h3>{{ article.title }}</h3>
+					<div class="archive-meta">
+						{{ article.locale_date }}
+						{% if article.readtime %}
+						&thinsp; &bull; &thinsp; {{article.readtime.minutes}} min read
+						{% endif %}
+					</div>
+				</a>
+			</div>
+			{% endfor %}
 		{% endfor %}
 	{% endfor %}
 	</div>

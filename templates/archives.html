@@ -3,10 +3,8 @@
 {% block title %}Writing | {{ SITENAME }}{% endblock %}
 
 {% block content %}
-	<h1 class="title">Writing</h1>
+	<h1 class="page-title">Writing</h1>
 	<div class="content">
-		<!-- {% for year, articles in dates | groupby('date.year') | sort(reverse=True) %}
-		<h2><a href="/{{ year }}/">{{ year }}</a></h2> -->
 		{% for article in articles | sort(attribute='date', reverse=True) %}
 		<div class="archive-link">
 			<a href="/{{ article.url }}">
@@ -20,7 +18,6 @@
 			</a>
 		</div>
 		{% endfor %}
-		<!-- {% endfor %} -->
 	</div>
 	<div id="back-to-home"><a href="/">&laquo; Back to Home</a></div>
 {% endblock %}

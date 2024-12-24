@@ -339,8 +339,8 @@ footer p {
 	hr { margin: 25px 10px; }
 }
 
-.period-archive {
-	margin-bottom: 16px;
+.page-title {
+	margin-bottom: 20px;
 }
 
 #view-archives {
@@ -368,7 +368,7 @@ footer p {
 }
 
 @media #{$mobile} {
-	.title, .date {
+	.title, .date, .page-title {
 		text-align: center;
 		float: none;
 		line-height: 1.25;

@@ -4,7 +4,7 @@
 {% block meta %}<meta name="robots" content="noindex">{% endblock %}
 
 {% block content %}
-	<h1 class="period-archive">Archive for {{ period | reverse | join(' ') }}</h1>
+	<h1 class="page-title">Archive for {{ period | reverse | join(' ') }}</h1>
 	<div class="content">
 	{% for year, _ in dates | groupby('date.year') %}
 		{% for month, articles in dates | groupby('date.month') %}

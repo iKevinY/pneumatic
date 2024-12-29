@@ -70,7 +70,7 @@ header {
 article {
 	margin-top: 30px;	
 
-	p:not(#bluesky-comments p) {
+	p:not(#bluesky-comments p):not(.admonition p) {
 		margin-bottom: 1.5em;
 	}
 }
@@ -240,7 +240,7 @@ code:not(pre code) {
 	border-width: 1px 0;
 	
 	p {
-		margin: 1em 0;	
+		margin: 0.5em 0;	
 	}
 }
 
